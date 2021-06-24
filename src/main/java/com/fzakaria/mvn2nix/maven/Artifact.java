@@ -66,7 +66,7 @@ public class Artifact {
                 + version
                 + "/"
                 + name + "-" + version
-                + (classifier.isBlank() ? "" : "-" + classifier)
+                + (!classifier.chars().allMatch(Character::isWhitespace) ? "" : "-" + classifier)
                 + "."
                 + extension;
     }
