@@ -20,6 +20,8 @@ in {
   mvn2nix-bootstrap = pkgs.mvn2nix-bootstrap;
 
   mvn2nix-jdk8 = pkgs.mvn2nix-jdk8;
+
+  mvn2nix-jdk8 = pkgs.mvn2nix-jdk8-bootstrap;
   
   buildMavenRepository = pkgs.buildMavenRepository;
 

@@ -12,6 +12,12 @@ self: super: {
     maven = self.maven-jdk8;
   };
 
+  mvn2nix-jdk8 = self.callPackage ./derivation.nix {
+    jdk = super.jdk8;
+    maven = self.maven-jdk8;
+    bootstrap = true;
+  };
+
   buildMavenRepository =
     (self.callPackage ./maven.nix { }).buildMavenRepository;
 
